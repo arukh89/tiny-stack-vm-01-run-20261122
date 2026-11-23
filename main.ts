@@ -25,7 +25,7 @@ S.pop();S[t-1]=r
 }
 else if(o<53){
 r=p[c-2]|p[c-1]<<8
-if(o<51){if(o==48||(o==49?!S.pop():S.pop()))c+=(r<<16)>>16}
+if(o<51){if(o==48||!S.pop()!=(o==50))c+=(r<<16)>>16}
 else if(o==51){if(C.length==64)T(7);C.push(c);c=r}
 else{if(!C.length)T(8);c=C.pop()}
 }
